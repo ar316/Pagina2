@@ -1,0 +1,45 @@
+#contenedor {    
+    height: 85vh;    
+    display: flex;
+    flex-direction: column;
+  }
+
+#login{
+    background-color: #03045E;
+    height: 26%;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;  
+    color: #00B4D8;   
+    border: 3px solid #00B4D8;
+    border-radius: 10px;  
+}
+
+h1{
+    margin-top: 7%;
+    margin-bottom: 10%;
+    color: #03045E;
+    text-align: center;
+    text-shadow: 4px 2px #558ABB;
+}
+h4{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#boton{
+    color: aliceblue;
+    background-color: #03045E;
+    border: 1px solid #00B4D8;
+    border-radius: 10px;
+}
+
+#boton:hover{
+    background-color: rgb(96, 96, 97);
+    color: #00B4D8;
+}
+
+h1:hover{
+    color: #01849e;
+}

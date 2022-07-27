@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="shortcut icon" href="src/img/favicon.png">
+    <link rel="stylesheet" href="src/estilos/generales.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/estilos/estiloscomprador.css">
+</head>
+<body>
+    <script src="src/js/index.js"></script>
+    <div class="lds-roller loader" id="loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <main>
+        <header class="cabecera">
+            <img class="logo" src="src/img/Logo.png" alt="logo">
+            <div class="menu pestaniaActiva">   
+                    <a class="redireccion" href="Comprador.html">Quiero Comprar</a>
+            </div>
+            <div class="menu">   
+                <a class="redireccion" href="Vendedor.html">Quiero Vender</a>
+            </div>
+            <div class="menu">   
+                <a class="redireccion" href="login.html">Iniciar Sesión</a>
+            </div>
+            <div class="menu">   
+                <a class="redireccion" href="mostrar.php">Administración</a>
+            </div>
+        </header>
+        <section id="filtrador">
+            <h4 id="filtros">Género</h4>
+            <a id="genero" href="#">Todos</a> <br>
+            <a id="genero" href="#">°Acción</a> <br>
+            <a id="genero" href="#">°Aventura</a> <br>
+            <a id="genero" href="#">°Carreras</a> <br>
+            <a id="genero" href="#">°Deportes</a> <br>
+            <a id="genero" href="#">°Multijugador</a> <br>
+            <a id="genero" href="#">°Terror</a> <br>
+            <div class="d-flex justify-content-center">
+                <input id="boton" type="image" src="src/img/anadir-a-la-cesta.png"/>
+            </div>
+            
+        </section>
+
+        <section class="catalogo">
+        
+            <!--Producto1-->
+            <div class="card"> 
+                <img src="src/img/AC2.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Assassins Creed 2</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 59.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto2-->
+            <div class="card"> 
+                <img src="src/img/AC3.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Assassins Creed 3</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 129.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto3-->
+            <div class="card"> 
+                <img src="src/img/AC Origins.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Assassins Creed Origins</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 179.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto4-->
+            <div class="card"> 
+                <img src="src/img/AC Valhalla.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Assassins Creed Valhalla</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 199.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto5-->
+            <div class="card"> 
+                <img src="src/img/Bioshock.jpg">
+                <div class="card-body">
+                    <h2 id="nombreprod">Bioshock</h2>
+                    <p class="descripcion">Género: Acción <br> $ 40.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto6-->
+             <div class="card"> 
+                <img src="src/img/Bioshock2.jpg">
+                <div class="card-body">
+                    <h2 id="nombreprod">Bioshock 2</h2>
+                    <p class="descripcion">Género: Acción <br> $ 40.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto7-->
+             <div class="card"> 
+                <img src="src/img/BioshockIn.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Bioshock Infinite</h3>
+                    <p class="descripcion">Género: Acción <br> $ 60.000<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto8-->
+            <div class="card"> 
+                <img src="src/img/Asylum.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Batman A. Asylum</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 40.000<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto9-->
+             <div class="card"> 
+                <img src="src/img/City.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Batman A. City</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 40.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto10-->
+             <div class="card"> 
+                <img src="src/img/Knight.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Batman A. Knight</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 40.000<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto11-->
+             <div class="card"> 
+                <img src="src/img/BO2.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">COD Black Ops 2</h3>
+                    <p class="descripcion">Género: Acción <br> $ 159.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto12-->
+             <div class="card"> 
+                <img src="src/img/BO3.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">COD Black Ops 3</h3>
+                    <p class="descripcion">Género: Acción <br> $ 219.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto13-->
+             <div class="card"> 
+                <img src="src/img/ColdWar.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">COD Cold War</h3>
+                    <p class="descripcion">Género: Acción <br> $ 238.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto14-->
+             <div class="card"> 
+                <img src="src/img/Vanguard.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">COD Vanguard</h3>
+                    <p class="descripcion">Género: Acción <br> $ 155.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto15-->
+            <div class="card"> 
+                <img src="src/img/Fifa 21.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Fifa 21</h3>
+                    <p class="descripcion">Género: Deportes <br> $ 240.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto16-->
+            <div class="card"> 
+                <img src="src/img/Fifa 22.jpeg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Fifa 22</h3>
+                    <p class="descripcion">Género: Deportes <br> $ 215.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto17-->
+             <div class="card"> 
+                <img src="src/img/Horizon 4.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Forza Horizon 4</h3>
+                    <p class="descripcion">Género: Carreras <br> $ 259.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+             <!--Producto18-->
+             <div class="card"> 
+                <img src="src/img/Horizon 5.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Forza Horizon 5</h3>
+                    <p class="descripcion">Género: Carreras <br> $ 214.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto19-->
+            <div class="card"> 
+                <img src="src/img/F1.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Fórmula 1 2021</h3>
+                    <p class="descripcion">Género: Deportes <br> $ 215.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto20-->
+            <div class="card"> 
+                <img src="src/img/GTA SA.jpeg">
+                <div class="card-body">
+                    <h3 id="nombreprod">GTA San Andreas</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 27.500<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto21-->
+            <div class="card"> 
+                <img src="src/img/GTA IV.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">GTA IV</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 80.000<br> <br><input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto22-->
+            <div class="card"> 
+                <img src="src/img/GTA V.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">GTA V</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 120.000<br> <br><input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto23-->
+            <div class="card"> 
+                <img src="src/img/NFS Heat.jpg">
+                <div class="card-body">
+                    <h2 id="nombreprod">NFS Heat</h2>
+                    <p class="descripcion">Género: Carreras <br> $ 279.900<br> <br><input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto24-->
+            <div class="card"> 
+                <img src="src/img/NFS HP.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">NFS Hot Pursuit</h3>
+                    <p class="descripcion">Género: Carreras <br> $ 119.900<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto25-->
+            <div class="card"> 
+                <img src="src/img/Outlast.jpg">
+                <div class="card-body">
+                    <h2 id="nombreprod">Outlast</h2>
+                    <p class="descripcion">Género: Terror <br> $ 31.000<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto26-->
+            <div class="card"> 
+                <img src="src/img/Outlast2.jpg">
+                <div class="card-body">
+                    <h2 id="nombreprod">Outlast 2</h2>
+                    <p class="descripcion">Género: Terror <br> $ 39.500<br> <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto27-->
+            <div class="card"> 
+                <img src="src/img/RDR.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Red Dead Redemption</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 118.000<br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+            <!--Producto28-->
+            <div class="card"> 
+                <img src="src/img/RDR2.jpg">
+                <div class="card-body">
+                    <h3 id="nombreprod">Red Ded Redemption 2</h3>
+                    <p class="descripcion">Género: Aventura <br> $ 240.000 <br> <input type="number" name="contador" id="cantidad" min="0" max="10"> <button id="agregar">Agregar</button>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <footer class="pieDePagina">
+            <div class="textoFooter">
+                <p>Universidad Distrital Francisco José de Caldas</p>
+                <p>Laboratorio 3 - Programación Avanzada</p>
+            </div>
+            <a href="https://www.udistrital.edu.co/inicio"><img class="iconosFooter" src="src/img/redes.png" alt="pagina Universidad"></a>
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+main{
+    color: white;
+    background-color: #03045E;
+    display: grid;
+    font-family: 'Quintessential', cursive;
+    min-width: 1000px;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 0px
+                         50px
+                          1fr
+                        100px;
+    grid-template-areas: "Encabezado Encabezado"
+                         "Menú       Menú"
+                         "agregados  micatalogo"
+                         "Pie        Pie";
+}
+header{
+    grid-area: Encabezado;
+    background-color: #00B4D8;
+}
+
+nav{
+    grid-area: Menú;
+}
+
+#filtrador{
+    text-align: center;
+    grid-area: agregados;
+    color: black;
+    background-color: #00B4D8;
+    font-weight: bold;
+}
+
+.catalogo{
+    width: 100%;
+    grid-area: micatalogo;
+    color: black;
+    background-color: #CAF0F8;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+footer{
+    grid-area: Pie;
+}
+
+.card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+#genero{
+    color: black;
+    margin-left: 10px;
+}
+
+.descripcion{
+    color: #90E0EF;
+    text-align: center;
+
+}
+
+#boton{
+    height:100px;
+    width:100px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px;
+    position: fixed;
+    margin-top: 190px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#boton:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 1);
+}
+
+#filtros{
+    margin-top: 20px;
+}
+
+#nombreprod{
+    margin-top: -20px;
+    color: #00B4D8;
+    text-align: center;
+}
+
+#agregar{
+    color: aliceblue;
+    background-color: #00B4D8;
+    border: 1px solid #00B4D8;
+    border-radius: 10px;
+}
+
+#agregar:hover{
+    background-color: rgb(96, 96, 97);
+    color: #00B4D8;
+}
+
+.card{
+    background: linear-gradient(319deg, rgba(44,51,51,1) 10%, rgba(3,4,94,1) 60%, rgba(0,212,255,1) 100%);  
+    width: 15rem;
+    height: 26rem;
+    border-radius: 1.25rem;
+}
+
+.card img{
+    max-width: 190px;
+    max-height: 210px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-radius: 1.25rem;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 1);
+}
+
+.card input{
+    width: 40%;
+    margin: 10px;
+    background-color: #2666CF;
+    text-align: end;
+    font-size: 20px;
+    border: 1px solid #2666CF;
+    border-radius: 10px;
+}
+
+.pieDePagina{
+    padding-top: 40px;
+}
+
+@media(max-width:600px){
+
+    main{
+        grid-template-columns: 150px 1fr;
+        grid-template-areas: "Encabezado Encabezado"
+                             "Menú       Menú"
+                             "agregados  micatalogo"
+                             "Pie        Pie";;
+    }
+    .catalogo{
+        width: 500px;
+        grid-area: micatalogo;
+    }
+    .cabecera{
+        width: min-content;
+    }
+    .pieDePagina{
+        width: max-content;
+    }
+
+}
+
+@media(min-width:600px) and (max-width:1000px){
+
+    main{
+        grid-template-columns: 180px 1fr;
+        grid-template-areas: "Encabezado Encabezado"
+                             "Menú       Menú"
+                             "agregados  micatalogo"
+                             "Pie        Pie";;
+    }
+    .catalogo{
+        width: 820px;
+        grid-area: micatalogo;
+    }
+    .cabecera{
+        width:max-content;
+    }
+    .pieDePagina{
+        width:max-content;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+.div-center{
+    margin: auto;
+}
+.container_Admin{
+    margin: auto;
+    max-width: 75%;
+    border: solid 2px #395B64;
+    text-align: center;
+    user-select: none;    
+    border-radius: 18px ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#dropdown{
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    background-color: #03045E;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    user-select: none;
+    color: #CAF0F8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.container_Admin:active{
+    background-color: #2C3333;
+    color: #CAF0F8;
+}
+.algo{
+    color: #03045E;
+    color: #00B4D8;
+    color: #90E0EF;
+    color : #CAF0F8;
+    /*paleta 2 */
+    color: #2C3333;
+    color : #395B64;
+    color : #2666CF;
+    color : #F5F2E7;
+}

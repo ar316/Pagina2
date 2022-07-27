@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/estilos/estilosvendedor.css" />
+    <link rel="stylesheet" href="src/estilos/generales.css">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <title>Vendedor</title>
+  </head>
+  <body>
+    <script src="src/js/index.js"></script>
+    <div class="lds-roller loader" id="loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <main>
+      <header class="cabecera">
+          <img class="logo" src="src/img/Logo.png" alt="logo">
+          <div class="menu">   
+              <a class="redireccion" href="Comprador.html">Quiero Comprar</a>
+          </div>
+          <div class="menu pestaniaActiva">   
+              <a class="redireccion" href="Vendedor.html">Quiero Vender</a>
+          </div>
+          <div class="menu">   
+            <a class="redireccion" href="login.html">Iniciar Sesión</a>
+        </div>
+          <div class="menu">   
+              <a class="redireccion" href="mostrar.php">Administración</a>
+          </div>
+      </header>
+      <section class="formulario">
+        <h2>Nuevo Producto</h2>
+        <form method="post" action="insertar.php" onclick="escribir()"> 
+          <label for="nombre">¿Cómo es tu nombre?</label>
+          <br>
+          <br>
+          <input class="orden" id="nombre"name="nombre" type="text" placeholder="Nombre del prooveedor" required/>
+          <p>Correo electrónico</p>
+          <input class="orden" id="correo" name="correo" type="email" placeholder="Correo electrónico" required/>
+          <p>Crear contraseña</p>          
+          <input class="orden" id="contra" name="contra" type="password" placeholder="Crear contraseña" required/>
+          <p>¿Qué juego vendes?</p>
+          <input class="orden" id="juego" name="juego" type="text" placeholder="Nombre del producto" required/>
+          <p>¿De qué género es este juego?</p>
+          <input class="orden" id="genero" name="genero" type="text" placeholder="Aventura,Acción,Terror,etc..." required/>
+          <p>$ ¿Por cuanto lo vendes? ¿Qué precio tiene? $</p>
+          <input class="orden" id="precio" name="precio" type="number" placeholder="Cantidad de dinero" required/>
+          <br>
+          <input style="display: none;" id="hashcontra" name="hashcontra" type="text"/>
+          <button id="pub">Publicar</button>
+        </form>
+      </section>
+    </main>
+    <div class="pieDePagina">
+      <div class="textoFooter">
+          <p>Universidad Distrital Francisco José de Caldas</p>
+          <p>Laboratorio 3 - Programación Avanzada</p>
+      </div>
+      <a href="https://www.udistrital.edu.co/inicio"><img class="iconosFooter" src="src/img/redes.png" alt="pagina Universidad"></a>
+  </div>
+  <script src="src/js/crear_token.js"></script>
+  </body>
+</html>
+<script>
+function escribir(){
+  var dato = document.getElementById("contra").value;
+  let hacer = document.getElementById("juego");
+  hacer.onclick = tokenizar(dato);
+}
+async function tokenizar(dato){
+    const data = new TextEncoder().encode(dato);
+    const hash = await crypto.subtle.digest('SHA-256', data); //devuelve un ArrayBuffer
+    const hashArray = Array.from(new Uint8Array(hash)); // convert buffer to byte array
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+    result = hashHex;
+    document.getElementById('hashcontra').value=result;
+}
+</script>

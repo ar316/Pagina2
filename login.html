@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang= 'es'>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar Sesión</title>
+        <link rel="shortcut icon" href="src/img/favicon.png">
+        <link rel="stylesheet" href="src/estilos/generales.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="src/estilos/estiloslogin.css">
+    </head>
+    <body>
+        <script src="src/js/index.js"></script>
+        <div class="lds-roller loader" id="loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <header class="cabecera">
+          <img class="logo" src="src/img/Logo.png" alt="logo">
+      </header>
+        <div id="contenedor">
+            <a style="text-decoration: none;" href="Comprador.html"><h1>¡Bienvenido a la tienda de videojuegos con los mejores precios!</h1>
+        <div style="text-align: center; color: black; display: none;" id="exitoso">
+            <p>Hola</p>
+        </div>
+        <div style="text-align: center; color: black; display: none;" id="fallo">
+            <p>Cuenta o Contraseña incorrecta.</p>
+        </div>
+            <div id="login"></a>
+                <h4>Iniciar sesión</h4>             
+                <form method="post" action="comprobar.php">
+                    <input type="email" id="usuario" name="usuario" required placeholder="Correo electrónico">        
+                    <br>       
+                    <input type="password" id="pass" name="pass" required placeholder="Contraseña">
+                    <br></br>
+                    <button id="boton">Ingresar</button>
+                </form>
+            </div>                
+        </div>
+        <footer class="pieDePagina">
+            <div class="textoFooter">
+                <p>Universidad Distrital Francisco José de Caldas</p>
+                <p>Laboratorio 3 - Programación Avanzada</p>
+            </div>
+            <a href="https://www.udistrital.edu.co/inicio"><img class="iconosFooter" src="src/img/redes.png" alt="pagina Universidad"></a>
+        </footer>
+    </body>
