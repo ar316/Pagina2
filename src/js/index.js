@@ -221,3 +221,102 @@ function esconder(dropdown, contenedor) {
          document.getElementById("loader").classList.toggle("loader2");
          }); 
      }
+
+
+     document.addEventListener('DOMContentLoaded', function() {
+
+      let carrito = [];
+         const carritohtml = document.querySelector("#carrito");
+         
+         const catalogo = document.querySelector('.catalogo');
+        
+      
+         funcionesDelproyecto()
+         function funcionesDelproyecto(){
+      
+            catalogo.addEventListener('click', agregarJuego);
+         }
+      
+      
+      
+         function agregarJuego(e){
+            e.preventDefault();
+            if(e.target.classList.contains("agregar")){
+               console.log("dando click");
+               const juego = e.target.parentElement.parentElement.parentElement;
+               console.log(juego);
+               leerDatos(juego);
+               
+            }
+           
+               // Tu código aquí
+      
+         }
+      
+      
+      
+         function leerDatos(juego){
+            const infoJuego = {
+               imagen : juego.querySelector('img').src,
+               nombre : juego.querySelector('h3').textContent,
+               precio: juego.querySelector(' .precio').textContent,
+               cantidad : 1
+            }
+            const existe = carrito.some( juego => juego.nombre === infoJuego.nombre)
+            if(!existe) {
+               carrito = [...carrito, infoJuego]
+                console.table(carrito)
+            }else{
+               const newArray = carrito.map( juego =>{
+                  if(juego.nombre === infoJuego.nombre){
+                     juego.cantidad++;
+                     return juego;
+                  }else{
+                     return juego;
+                  }
+               });
+               carrito = [...newArray];
+            }
+            console.table(carrito);
+            
+            limpiar()
+            llenarCarrito()
+      
+         }
+      
+      
+      function llenarCarrito(){
+         carrito.forEach( juego => {
+            const row = document.createElement('tr');
+            const { imagen, nombre, precio, cantidad } = juego
+            row.innerHTML = `
+      
+               <td> 
+                  <img  src="${imagen}" width= "30px">
+               </td>
+               <td> 
+                  ${nombre}
+               </td>
+               <td> 
+                  ${precio}
+               </td>
+               <td> 
+                  ${cantidad}
+               </td>
+            
+            
+            `;
+            carritohtml.appendChild(row);
+      
+         });
+      
+      }
+      
+      function limpiar(){
+         carritohtml.innerHTML = "";
+      }
+      
+      
+      
+      });
+      
